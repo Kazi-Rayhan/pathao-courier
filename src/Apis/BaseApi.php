@@ -116,7 +116,7 @@ class BaseApi
 
         if ($jsonToken->expires_in < time()) {
             $this->authenticate();
-            $jsonToken = Storage::get('pathao_bearer_token.json');
+            $jsonToken = Storage::disk('local')->get('pathao_bearer_token.json');
             $jsonToken = json_decode($jsonToken);
         }
 
