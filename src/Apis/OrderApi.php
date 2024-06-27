@@ -28,8 +28,7 @@ class OrderApi extends BaseApi
             "recipient_zone",
             "delivery_type",
             "item_type",
-            "item_quantity",
-            "amount_to_collect",
+            "item_quantity"
         ]);
 
         $response = $this->authorization()->send("POST", "aladdin/api/v1/orders", $array);
